@@ -8,9 +8,21 @@
       <link href="post-my-site/"/>
       <url>post-my-site/</url>
       
-        <content type="html"><![CDATA[<p><img src="/.io//post-my-site%5C%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202011221432211.png" alt="冰岛"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/post-my-site/1.jpg" alt="冰岛"></p><img src="/post-my-site/2.jpg" alt="post" style="zoom: 80%;">]]></content>
       
       
+      <categories>
+          
+          <category> gallery </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iceland </tag>
+            
+        </tags>
       
     </entry>
     
