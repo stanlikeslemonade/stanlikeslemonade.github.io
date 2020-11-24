@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>post-my-site</title>
+      <title>web-writeup</title>
+      <link href="web-writeup/"/>
+      <url>web-writeup/</url>
+      
+        <content type="html"><![CDATA[<h1 id="web-writeup"><a href="#web-writeup" class="headerlink" title="web-writeup"></a><strong>web-writeup</strong></h1><img src="/web-writeup/3.jpeg" alt="iceland" style="zoom: 50%;"><h2 id="basic-rce"><a href="#basic-rce" class="headerlink" title="basic rce"></a>basic rce</h2><p><a href="http://www.henuctf.com:2077/yijuhua/">http://www.henuctf.com:2077/yijuhua/</a></p><h3 id="一-审题"><a href="#一-审题" class="headerlink" title="一.审题"></a>一.审题</h3><p>该题是考察一句话木马。查找资料后发现这题有点像【bugkuctf】过狗一句话，hack在目标服务器已经放置好了一句话木马，题中有个<code>eval($_GET['a'])函数</code>，这标志着我们只需要利用好这个木马，读取flag文件。但没解出来。</p><h3 id="二-学习总结"><a href="#二-学习总结" class="headerlink" title="二.学习总结"></a>二.学习总结</h3><h4 id="1-什么是一句话木马"><a href="#1-什么是一句话木马" class="headerlink" title="1.什么是一句话木马"></a>1.什么是一句话木马</h4><ol><li>文件上传是大部分web应用都具备的功能，如用户上传文件，头像等。</li><li>正常上传的文件一般是图片文档视频等，web应用收集后放在后台，等待用户调用返回</li><li>如果恶意文件如PHP、ASP等执行文件绕过web应用并顺利执行，则相当于hack直接拿到webshell</li><li>一旦hack拿到了webshell，则可以拿到web应用的数据，删除web文件，本地提取，进一步拿下整个服务器甚至内网</li><li>SQL注入的对象是数据库服务，而文件上传漏洞主要攻击web服务，两种渗透相结合以达到对目标深度控制</li><li>常用的工具为中国菜刀和蚁剑</li></ol><h4 id="2-入侵条件"><a href="#2-入侵条件" class="headerlink" title="2.入侵条件"></a>2.入侵条件</h4><pre><code>（1）木马上传成功，未被杀；（2）知道木马的路径在哪；（3）上传的木马能正常运行。</code></pre><h4 id="3-木马的防御"><a href="#3-木马的防御" class="headerlink" title="3.木马的防御"></a>3.木马的防御</h4><p>低安全文件上传模式     上传文件类型大小无限制</p><p>中级安全文件上传模式</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> weblearning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>myimages</title>
       <link href="post-my-site/"/>
       <url>post-my-site/</url>
       
