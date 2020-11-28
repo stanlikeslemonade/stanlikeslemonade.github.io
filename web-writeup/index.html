@@ -712,7 +712,7 @@ extract_rules 可选。extract() 函数将检查每个键名是否为合法的�
             <span class="token delimiter">&lt;?php</span> <span class="token punctuation">}</span> <span class="token delimiter">?></span>
           <span class="token delimiter">&lt;?php</span> <span class="token punctuation">}</span> <span class="token delimiter">?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>虽然我们不知道<code>thepassword_123</code>的值，但是extract函数可以覆盖它，所以payload：pass=a&amp;password_123=a</p>
-<p>类似的还有<strong>parse_str()变量覆盖</strong>     <strong>import_request_variables()变量覆盖</strong>   <strong>$$使用不当</strong>                                                        </p>
+<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><p>类似的还有<strong>parse_str()变量覆盖</strong>     <strong>import_request_variables()变量覆盖</strong>   <strong>$$使用不当</strong>                                                        </p>
 <p>参考资料：（很全，就不复制张贴了）</p>
 <p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35569814/article/details/100588340">https://blog.csdn.net/qq_35569814/article/details/100588340</a></p>
 <h2 id=""><a href="#" class="headerlink" title=""></a></h2><hr>
@@ -800,7 +800,7 @@ $IFS$9
 <span class="token delimiter">?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>payload：</p>
 <p><u>Get方法传输</u>：<code>?_200=flag</code><br><u>Post方法传输</u>：<code>flag=asd</code></p>
-<h2 id="二-学习笔记-2"><a href="#二-学习笔记-2" class="headerlink" title="二.学习笔记"></a>二.学习笔记</h2><h3 id="1-变量覆盖"><a href="#1-变量覆盖" class="headerlink" title="1.$$变量覆盖"></a>1.$$变量覆盖</h3><p><strong>$$</strong> 导致的变量覆盖问题在CTF代码审计题目中经常在foreach中出现，使用foreach来遍历数组中的值，然后再将获取到的数组键名作为变量，数组中的值作为变量的值。因此就产生了变量覆盖漏洞。</p>
+<h3 id="二-学习笔记-2"><a href="#二-学习笔记-2" class="headerlink" title="二.学习笔记"></a>二.学习笔记</h3><h4 id="1-变量覆盖"><a href="#1-变量覆盖" class="headerlink" title="1.$$变量覆盖"></a>1.$$变量覆盖</h4><p><strong>$$</strong> 导致的变量覆盖问题在CTF代码审计题目中经常在foreach中出现，使用foreach来遍历数组中的值，然后再将获取到的数组键名作为变量，数组中的值作为变量的值。因此就产生了变量覆盖漏洞。</p>
 <h4 id="2-PHP-foreach-遍历数组"><a href="#2-PHP-foreach-遍历数组" class="headerlink" title="2.PHP foreach 遍历数组"></a>2.PHP foreach 遍历数组</h4><p>foreach 语句用于循环遍历数组。<br>每进行一次循环，当前数组元素的值就会被赋值给 value 变量(数组指针会逐一地移动) - 以此类推。<br><strong>它的语法是：</strong><br><code>foreach (array as value)</code> 或者<code>foreach (array as $key =&gt; $value)</code>【任选其一】<code>{</code></p>
 <p><code>code to be executed;</code>//要执行的代码</p>
 <p><code>}</code>  注：当试图将其用于其它数据类型或者一个未初始化的变量时会产生错误。</p>
