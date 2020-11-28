@@ -801,7 +801,7 @@ $IFS$9
 <p>payload：</p>
 <p><u>Get方法传输</u>：<code>?_200=flag</code><br><u>Post方法传输</u>：<code>flag=asd</code></p>
 <h2 id="二-学习笔记-2"><a href="#二-学习笔记-2" class="headerlink" title="二.学习笔记"></a>二.学习笔记</h2><h3 id="1-变量覆盖"><a href="#1-变量覆盖" class="headerlink" title="1.$$变量覆盖"></a>1.$$变量覆盖</h3><p><strong>$$</strong> 导致的变量覆盖问题在CTF代码审计题目中经常在foreach中出现，使用foreach来遍历数组中的值，然后再将获取到的数组键名作为变量，数组中的值作为变量的值。因此就产生了变量覆盖漏洞。</p>
-<h3 id="2-PHP-foreach-遍历数组"><a href="#2-PHP-foreach-遍历数组" class="headerlink" title="2.PHP foreach 遍历数组"></a>2.PHP foreach 遍历数组</h3><p>foreach 语句用于循环遍历数组。<br>每进行一次循环，当前数组元素的值就会被赋值给 value 变量(数组指针会逐一地移动) - 以此类推。<br><strong>它的语法是：</strong><br><code>foreach (array as value)</code> 或者<code>foreach (array as $key =&gt; $value)</code>【任选其一】<code>{</code></p>
+<h4 id="2-PHP-foreach-遍历数组"><a href="#2-PHP-foreach-遍历数组" class="headerlink" title="2.PHP foreach 遍历数组"></a>2.PHP foreach 遍历数组</h4><p>foreach 语句用于循环遍历数组。<br>每进行一次循环，当前数组元素的值就会被赋值给 value 变量(数组指针会逐一地移动) - 以此类推。<br><strong>它的语法是：</strong><br><code>foreach (array as value)</code> 或者<code>foreach (array as $key =&gt; $value)</code>【任选其一】<code>{</code></p>
 <p><code>code to be executed;</code>//要执行的代码</p>
 <p><code>}</code>  注：当试图将其用于其它数据类型或者一个未初始化的变量时会产生错误。</p>
 <p>上述语法中，每次循环将当前单元的值赋给 $value 并且数组内部的指针向前移一步。在第二种语法格式中还将当前单元的键名也会在每次循环中赋给变量 $key。</p>
